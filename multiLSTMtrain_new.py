@@ -9,6 +9,10 @@ from keras.models import Sequential
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 
+# TODO:
+# 输入形式：每条标定数据=>单个阶段文件csv
+# 每个小文件一个标签，在模型结构中完成
+
 def csv2vec():
     '''
     读取训练数据，并采用one_hot编码等方式向量化
