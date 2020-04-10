@@ -86,11 +86,13 @@ if __name__ == '__main__':
     batchSize = 512 #batch size
     nb_epoch = 5 # 训练周期
 
-    rootPath = "D:\\PycharmProject\\LSTM\\data\\"
+    rootPath = "D:\\PythonDemo\\test\\"
+    # rootPath = "D:\\PycharmProject\\LSTM\\data\\"
     # rootPath = "/root/Templates/LSTM/data/"
     # 加载训练数据
     labelList = ["label0", "label1", "label2", "label3", "label4", "label5", "label6"]
-    filename = rootPath + "ral\\darpa2000LLDos1.0\\test_darpa_inside-1.0.csv"
+    # filename = rootPath + "ral\\darpa2000LLDos1.0\\test_darpa_inside-1.0.csv"
+    filename = rootPath + "phase1-5-darpa2.0.2.csv"
     # filename = rootPath + "darpa/test_darpa_inside-1.0.csv"
     print('> Loading data from: ' + filename)
     data = pd.read_table(filename, header=0, sep=',')
@@ -114,6 +116,7 @@ if __name__ == '__main__':
     # 多LSTM模型训练
     lossList = []
     accuracyList = []
+
     for i in range(len(labelList)):
         labelNum = labelList[i]
         encY = OneHotEncoder(sparse=False).fit(df[[labelNum]])
