@@ -48,6 +48,7 @@ def build_model(layers, seq_len):
     :return: LSTM模型
     '''
     model = Sequential()
+    # 添加层
     model.add(LSTM(layers[1], input_shape=(seq_len, layers[0]), return_sequences=True))
     model.add(LSTM(layers[2], input_shape=(seq_len, layers[1])))
     model.add(Dense(units=layers[3], input_dim=(layers[2]), activation='softmax'))  # 激活函数可选'tanh'
