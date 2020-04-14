@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     # 加载测试数据
     # testFile = "D:\\PycharmProject\\LSTM\\data\\ral\\darpa2000LLDos1.0\\1.0-phase1-5样本拆分\\" + filename
-    testFile = "D:\\PythonDemo\\test\\split\\cicids" + filename
+    testFile = "D:\\PythonDemo\\test\\split\\cicids\\" + filename 
     testdata = pd.read_table(testFile, header=0, sep=',')
     testdf = pd.DataFrame(testdata).fillna(0)
     testX = csv2vec()
@@ -61,6 +61,6 @@ if __name__ == '__main__':
         if out[0] > outMax:
             outMax = out[0]
             stage = i
-    print('The stage of this dada is: ' + str(stage))
+    print('The stage of this data is: ' + str(stage))
     print("ALL COMPLETED!")
     exit()
