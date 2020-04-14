@@ -93,7 +93,7 @@ if __name__ == '__main__':
     # 加载训练数据
     labelList = ["label0", "label1", "label2", "label3", "label4", "label5", "label6"]
     # filename = rootPath + "ral\\darpa2000LLDos1.0\\test_darpa_inside-1.0.csv"
-    filename = rootPath + "phase1-5-darpa2.0.2.csv"
+    filename = rootPath + "darpa-trainset.csv"
     # filename = rootPath + "darpa/test_darpa_inside-1.0.csv"
     print('> Loading data from: ' + filename)
     data = pd.read_table(filename, header=0, sep=',')
