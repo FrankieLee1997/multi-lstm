@@ -172,7 +172,7 @@ if __name__ == '__main__':
     parser.add_argument('-p', '--pcap')
     args = parser.parse_args()
 
-    # 判定ip，并转成同形式
+    # 判定ip并转成同形式
     test_ip = str(args.ip)
     test_ip_split = test_ip.split(".")
     process_ip = float(int(test_ip_split[0]) * 256 ** 3 +
